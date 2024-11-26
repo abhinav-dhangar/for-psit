@@ -1,0 +1,67 @@
+{
+  "Python Boilerplate": {
+    "prefix": "boi",
+    "body": [
+      "def main():",
+      "    # Your code starts here",
+      "    pass",
+      "",
+      "if __name__ == \"__main__\":",
+      "    main()"
+    ],
+    "description": "Basic Python program structure"
+  },
+  "Print Statement": {
+    "prefix": "p",
+    "body": ["print(\"$1\")$0"],
+    "description": "Insert a print statement"
+  },
+  "For Loop": {
+    "prefix": "pyfor",
+    "body": ["for ${1:variable} in ${2:iterable}:", "    $3"],
+    "description": "Insert a for loop"
+  },
+  "If Statement": {
+    "prefix": "pyif",
+    "body": ["if ${1:condition}:", "    $2"],
+    "description": "Insert an if statement"
+  },
+  "Elif Statement": {
+    "prefix": "pyelif",
+    "body": ["elif ${1:condition}:", "    $2"],
+    "description": "Insert an elif statement"
+  },
+  "Else Statement": {
+    "prefix": "pyelse",
+    "body": ["else:", "    $1"],
+    "description": "Insert an else statement"
+  },
+  "While Loop": {
+    "prefix": "pywhile",
+    "body": ["while ${1:condition}:", "    $2"],
+    "description": "Insert a while loop"
+  },
+  "Function Declaration": {
+    "prefix": "def",
+    "body": [
+      "def ${1:function_name}(${2:args}):",
+      "    \"\"\"${3:Docstring}\"\"\"",
+      "    $4"
+    ],
+    "description": "Insert a function definition"
+  },
+  "Class Definition": {
+    "prefix": "pyclass",
+    "body": [
+      "class ${1:ClassName}(${2:object}):",
+      "    def __init__(self, ${3:args}):",
+      "        $4"
+    ],
+    "description": "Insert a class definition"
+  },
+  "Try-Except Block": {
+    "prefix": "pytry",
+    "body": ["try:", "    $1", "except ${2:Exception} as ${3:e}:", "    $4"],
+    "description": "Insert a try-except block"
+  }
+}
