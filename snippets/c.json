@@ -1,34 +1,217 @@
 {
-  "boi": {
-    "prefix": "boi",
-    "body": ["#include <stdio.h>", "", "int main(){", "$1", "return 0;", "}"],
-    "description": "Log output to console"
-  },
-  "iff": {
-    "prefix": "iff",
-    "body": ["if(){", "$1", "}"],
-    "description": "Log output to console"
-  },
-  "log": {
-    "prefix": "log",
-    "body": ["printf(\"${1}\");"],
-    "description": "Insert a printf statement with cursor between quotes"
-  },
-  "vma": {
-    "prefix": "vma",
-    "body": ["void main(){", "$1", "}"]
-  },
-  "ima": {
-    "prefix": "ima",
-    "body": ["int main(){", "$1", "return 0;", "}"]
-  },
-  "scf": {
-    "prefix": "scf",
-    "body": ["scanf(%,&);"]
-  },
-  "While Loop": {
-    "prefix": "cwhile",
-    "body": ["while (${1:condition}) {", "    $2", "}"],
-    "description": "Insert a while loop"
-  }
+	// Place your snippets for c here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"boi": {
+		"prefix": "boi",
+		"body": [
+			"#include <stdio.h>",
+			"",
+			"int main(){",
+			"$1",
+			"return 0;",
+			"}"
+		],
+		"description": "Log output to console"
+	},
+	"iff": {
+		"prefix": "iff",
+		"body": [
+			"if(){",
+			"$1",
+			"}"
+		],
+		"description": "Log output to console"
+	},
+	"vma": {
+		"prefix": "vma",
+		"body": [
+			"void main(){",
+			"$1",
+			"}"
+		]
+	},
+	"ima": {
+		"prefix": "ima",
+		"body": [
+			"int main(){",
+			"$1",
+			"return 0;",
+			"}"
+		]
+	},
+	"scf": {
+		"prefix": "scf",
+		"body": [
+			"scanf(\"%${1:d}\", &$2);$3"
+		]
+	},
+	"While Loop": {
+		"prefix": "cwhile",
+		"body": [
+			"while (${1:condition}) {",
+			"    $2",
+			"}"
+		],
+		"description": "Insert a while loop"
+	},
+	"pr": {
+		"prefix": "pr",
+		"body": [
+			"printf(\"$1\");$2"
+		]
+	},
+	"len": {
+		"prefix": "len",
+		"body": [
+			"int length = sizeof($1)/sizeof($1[0]);$2"
+		]
+	},
+	"lenstr": {
+		"prefix": "lenstr",
+		"body": [
+			"int length = strlen($1);$2"
+		]
+	},
+	"matx3": {
+		"prefix": "matx3",
+		"body": [
+			"int matrix[3][3]  = {{1,2,3},{4,5,6},{7,8,9}};",
+			"$1"
+		]
+	},
+	"Function": {
+		"prefix": "func",
+		"body": [
+			"${1:void} ${2:functionName}(${3:void}) {",
+			"    $4",
+			"}"
+		],
+		"description": "Insert a function definition"
+	},
+	"matx4": {
+		"prefix": "matx4",
+		"body": [
+			"int matrix[4][4] = {",
+			"    {1, 2, 3, 4},",
+			"    {5, 6, 7, 8},",
+			"    {9, 10, 11, 12},",
+			"    {13, 14, 15, 16}",
+			"};",
+			"$0"
+		],
+		"description": "Insert a 4x4 matrix with serial numbers"
+	},
+	"printArray": {
+		"prefix": "prArr",
+		"body": [
+			"void printArray(int arr[],int length);",
+			"void printArray(int arr[],int length){",
+			"",
+			"printf(\"array is : \\n\");",
+			"for(int i=0;i<length;i++){",
+			"printf(\"%d\\n\",arr[i]);",
+			"}",
+			"}",
+			""
+		]
+	},
+	"Min Function": {
+		"prefix": "minfunc",
+		"body": [
+			"int min(int a, int b);",
+			"int min(int a, int b) {",
+			"    return (a < b) ? a : b;",
+			"}",
+			""
+		],
+		"description": "Min function to return the smaller of two values"
+	},
+	"Max Function": {
+		"prefix": "maxfunc",
+		"body": [
+			"int max(int a, int b);",
+			"int max(int a, int b) {",
+			"    return (a > b) ? a : b;",
+			"}",
+			""
+		],
+		"description": "Max function to return the larger of two values"
+	},
+	"Clamp Function": {
+		"prefix": "clampfunc",
+		"body": [
+			"int clamp(int value, int minVal, int maxVal);",
+			"int clamp(int value, int minVal, int maxVal) {",
+			"    return (value < minVal) ? minVal : (value > maxVal) ? maxVal : value;",
+			"}"
+		],
+		"description": "Clamp function to restrict a value between a min and max range"
+	},
+	"Is Even Function": {
+		"prefix": "isevenfunc",
+		"body": [
+			"int isEven(int num);",
+			"int isEven(int num) {",
+			"    return (num % 2 == 0);",
+			"}",
+			""
+		],
+		"description": "Function to check if a number is even"
+	},
+	"Is Odd Function": {
+		"prefix": "isoddfunc",
+		"body": [
+			"int isOdd(int num);",
+			"int isOdd(int num) {",
+			"    return (num % 2 != 0);",
+			"}",
+			""
+		],
+		"description": "Function to check if a number is odd"
+	},
+	
+		"Push Function": {
+		  "prefix": "pushfunc",
+		  "body": [
+			"// Function to push an element at the end of the array",
+			"void push(int* arr, int* size, int value,int maxLength);",
+			"void push(int* arr, int* size, int value,int maxLength) {",
+			"    if (*size < maxLength) {",
+			"        arr[*size] = value;", 
+			"        (*size)++;", 
+			"    } else {",
+			"        printf(\"Array is full, cannot push element %d\\n\", value);",
+			"    }",
+			"}",
+			"",
+			""
+		  ],
+		  "description": "Push function to add an element at the end of the array"
+		},
+		"RevPush Function": {
+		  "prefix": "revpushfunc",
+		  "body": [
+			"// Function to push an element at the beginning of the array (revPush)",
+			"void revPush(int* arr, int* size, int value,int maxLength);",
+			"void revPush(int* arr, int* size, int value,int maxLength) {",
+			"    if (*size < maxLength) {",
+			"        for (int i = *size; i > 0; i--) {",
+			"            arr[i] = arr[i - 1];",
+			"        }",
+			"        arr[0] = value;", 
+			"        (*size)++;", 
+			"    } else {",
+			"        printf(\"Array is full, cannot revPush element %d\\n\", value);",
+			"    }",
+			"}",
+			"",
+			""
+		  ],
+		  "description": "RevPush function to add an element at the beginning of the array"
+		}
+	  
+	  
 }
