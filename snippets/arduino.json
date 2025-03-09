@@ -1,0 +1,62 @@
+{
+  "Arduino Boilerplate": {
+    "prefix": "boi",
+    "body": [
+      "#include <Arduino.h>",
+      "",
+      "void setup() {",
+      "  Serial.begin(115200);",
+      "}",
+      "",
+      "void loop() {",
+      "  // Your code here",
+      "}"
+    ],
+    "description": "Boilerplate for Arduino with PlatformIO"
+  },
+  "Serial Print": {
+    "prefix": "pr",
+    "body": ["Serial.print($1);", "$2"],
+    "description": "Shortcut for Serial.print()"
+  },
+  "Serial Println": {
+    "prefix": "prl",
+    "body": ["Serial.println($1);", "$2"],
+    "description": "Shortcut for Serial.println()"
+  },
+  "Delay": {
+    "prefix": "dly",
+    "body": ["delay($1);", "$2"],
+    "description": "Shortcut for delay() function"
+  },
+  "Define Pin": {
+    "prefix": "dfp",
+    "body": ["#define $1 $2"],
+    "description": "Shortcut for defining a pin"
+  },
+  "Digital Write High": {
+    "prefix": "dwh",
+    "body": ["digitalWrite($1, HIGH);", "$2"],
+    "description": "Shortcut for digitalWrite HIGH"
+  },
+  "Digital Write Low": {
+    "prefix": "dwl",
+    "body": ["digitalWrite($1, LOW);", "$2"],
+    "description": "Shortcut for digitalWrite LOW"
+  },
+  "Digital Read": {
+    "prefix": "drd",
+    "body": ["digitalRead($1);", "$2"],
+    "description": "Shortcut for digitalRead()"
+  },
+  "Analog Read": {
+    "prefix": "ard",
+    "body": ["analogRead($1);", "$2"],
+    "description": "Shortcut for analogRead()"
+  },
+  "Analog Write": {
+    "prefix": "awt",
+    "body": ["analogWrite($1, $2);", "$3"],
+    "description": "Shortcut for analogWrite()"
+  }
+}

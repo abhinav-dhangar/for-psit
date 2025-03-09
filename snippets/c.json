@@ -1,0 +1,34 @@
+{
+  "boi": {
+    "prefix": "boi",
+    "body": ["#include <stdio.h>", "", "int main(){", "$1", "return 0;", "}"],
+    "description": "Log output to console"
+  },
+  "iff": {
+    "prefix": "iff",
+    "body": ["if(){", "$1", "}"],
+    "description": "Log output to console"
+  },
+  "log": {
+    "prefix": "log",
+    "body": ["printf(\"${1}\");"],
+    "description": "Insert a printf statement with cursor between quotes"
+  },
+  "vma": {
+    "prefix": "vma",
+    "body": ["void main(){", "$1", "}"]
+  },
+  "ima": {
+    "prefix": "ima",
+    "body": ["int main(){", "$1", "return 0;", "}"]
+  },
+  "scf": {
+    "prefix": "scf",
+    "body": ["scanf(%,&);"]
+  },
+  "While Loop": {
+    "prefix": "cwhile",
+    "body": ["while (${1:condition}) {", "    $2", "}"],
+    "description": "Insert a while loop"
+  }
+}
